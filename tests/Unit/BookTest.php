@@ -19,8 +19,8 @@ class BookTest extends TestCase
         $this->assertEquals('The Hobbit', $latest_book->name);
         $this->assertEquals('J.R.R Tolkien', $latest_book->author);
 
-        $this->seeInDatabase(['id' => 1, 'name' => 'The Hobbit', 'author' => 'J.R.R Tolkien']);
-        $this->notSeeInDatabase(['name' => 'Harry Potter']);
+        $this->seeInDatabase('books', ['id' => 1, 'name' => 'The Hobbit', 'author' => 'J.R.R Tolkien']);
+        $this->notSeeInDatabase('books', ['name' => 'Harry Potter']);
 
     }
 }
