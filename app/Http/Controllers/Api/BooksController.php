@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers\Api;
 
-use Illuminate\Http\Request;
-
-use App\Http\Requests;
+use App\Book;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
 class BooksController extends Controller
 {
@@ -16,7 +15,8 @@ class BooksController extends Controller
      */
     public function index()
     {
-        //
+        $books = Book::all();
+        return $books;
     }
 
     /**
