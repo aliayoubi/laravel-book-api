@@ -6,6 +6,7 @@ class BooksControllerTest extends TestCase
 {
     use DatabaseMigrations;
 
+    /** @test */
     public function index_should_return_all_books()
     {
         $books = factory(App\Book::class, 10)->create();
