@@ -10,7 +10,7 @@ class ReviewTest extends TestCase
     public function test_a_review_can_be_created()
     {
         $user = factory(App\User::class)->create();
-        $book = $user->books()->save(factory(App\Book::class)->make());
+        $book = factory(App\Book::class)->create();
 
         $review = $user->reviews()->create([
             'title' => 'This book is so awesome!',
