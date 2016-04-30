@@ -13,7 +13,7 @@ class BookTest extends TestCase
 
         $book = Book::create(['name' => 'The Hobbit', 'author' => 'J.R.R Tolkien']);
 
-        $latest_book = $book->orderBy('created_at', 'DESC')->first();
+        $latest_book = $book->latest()->first();
 
         $this->assertEquals($book->id, $latest_book->id);
         $this->assertEquals('The Hobbit', $latest_book->name);
