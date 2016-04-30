@@ -10,7 +10,6 @@ class BookTest extends TestCase
     /** @test */
     public function test_a_book_can_be_created()
     {
-
         $book = Book::create(['name' => 'The Hobbit', 'author' => 'J.R.R Tolkien']);
 
         $latest_book = $book->latest()->first();
